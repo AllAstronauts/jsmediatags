@@ -277,18 +277,28 @@ class FLACTagReader extends MediaTagReader {
       let split = [s.slice(0, d), s.slice(d + 1)];
       switch (split[0]) {
         case "TITLE":
+        case "Title":
+        case "title":  
           title = split[1];
           break;
         case "ARTIST":
+        case "Artist":
+        case "artist":
           artist = split[1];
           break;
         case "ALBUM":
+        case "Album":
+        case "album":
           album = split[1];
           break;
         case "TRACKNUMBER":
+        case "Tracknumber":
+        case "tracknumber":
           track = split[1];
           break;
         case "GENRE":
+        case "Genre":
+        case "genre":
           genre = split[1];
           break;
       }
