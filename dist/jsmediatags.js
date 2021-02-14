@@ -685,22 +685,28 @@ function (_MediaTagReader) {
 
         switch (split[0]) {
           case "TITLE":
-            title = split[1];
-            break;
-
-          case "ARTIST":
-            artist = split[1];
-            break;
-
-          case "ALBUM":
-            album = split[1];
-            break;
-
-          case "TRACKNUMBER":
-            track = split[1];
-            break;
-
-          case "GENRE":
+        case "Title":
+        case "title":  
+          title = split[1];
+          break;
+        case "ARTIST":
+        case "Artist":
+        case "artist":
+          artist = split[1];
+          break;
+        case "ALBUM":
+        case "Album":
+        case "album":
+          album = split[1];
+          break;
+        case "TRACKNUMBER":
+        case "Tracknumber":
+        case "tracknumber":
+          track = split[1];
+          break;
+        case "GENRE":
+        case "Genre":
+        case "genre":
             genre = split[1];
             break;
         }
